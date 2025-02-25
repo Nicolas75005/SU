@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app-container {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Fond animé avec particules */
+.particles-background {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, rgb(28, 25, 23) 0%, rgb(41, 37, 36) 100%);
+  z-index: 0;
+  overflow: hidden;
+}
+
+.particles-container {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(217, 119, 6, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particleFloat linear forwards;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-20vh) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Ajout d'un effet de flou pour adoucir les particules */
+.particles-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(1px);
+}
+
+/* Assurer la lisibilité du texte */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}

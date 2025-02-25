@@ -1,0 +1,32 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prevent browsers from incorrectly detecting non-scripts as scripts
+    X-Content-Type-Options = "nosniff"
+    
+    # Don't allow site to be rendered within an iframe
+    X-Frame-Options = "DENY"
+    
+    # Enable browser features to prevent XSS attacks
+    X-XSS-Protection = "1; mode=block"
+    
+    # Only allow HTTPS connections
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    
+    # Control how much information the browser includes with navigation requests
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Control which features and APIs can be used in the browser
+    Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+    
+    # Prevent MIME type sniffing
+    X-Content-Type-Options = "nosniff"
+    
+    # Enable Cross-Origin Resource Sharing
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+    Access-Control-Allow-Headers = "Origin, X-Requested-With, Content-Type, Accept"

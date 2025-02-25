@@ -1,0 +1,51 @@
+/* Styles de base pour le calendrier */
+.react-datepicker {
+  @apply bg-neutral-800 border border-neutral-700 rounded-lg shadow-lg !important;
+}
+
+.react-datepicker__header {
+  @apply bg-neutral-900 border-b border-neutral-700 !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  @apply text-white !important;
+}
+
+.react-datepicker__day {
+  @apply text-gray-300 hover:bg-amber-600 hover:text-white !important;
+}
+
+.react-datepicker__day--selected {
+  @apply bg-amber-600 text-white !important;
+}
+
+.react-datepicker__day--disabled {
+  @apply text-neutral-600 hover:bg-transparent hover:text-neutral-600 cursor-not-allowed !important;
+}
+
+.react-datepicker__navigation-icon::before {
+  @apply border-gray-400 !important;
+}
+
+.react-datepicker__navigation:hover *::before {
+  @apply border-white !important;
+}
+
+.react-datepicker__day--today {
+  @apply font-bold text-amber-500 !important;
+}
+
+.react-datepicker__triangle {
+  @apply hidden !important;
+}
+
+/* Style du conteneur du datepicker */
+.react-datepicker-wrapper {
+  @apply w-full;
+}
+
+/* Style du champ de saisie */
+.react-datepicker__input-container input {
+  @apply w-full bg-neutral-700 text-white rounded-md px-4 py-2 focus:ring-2 focus:ring-amber-500 focus:outline-none;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/su-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.onesignal.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      img-src 'self' https: data:;
+      font-src 'self' https://fonts.gstatic.com;
+      connect-src 'self' https://xeljwohleuetiggezshn.supabase.co wss://xeljwohleuetiggezshn.supabase.co https://cdn.onesignal.com https://onesignal.com;
+      frame-src 'self' https://www.google.com;
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self';
+      frame-ancestors 'none';
+      upgrade-insecure-requests;
+    ">
+    
+    <!-- SEO Meta Tags -->
+    <title>SU. | Restaurant & Bar à Cocktails Paris 11ème</title>
+    <meta name="description" content="Restaurant & bar à cocktails à Paris 11ème. Cuisine raffinée, cocktails créatifs et ambiance chaleureuse. Réservez votre table pour une expérience gastronomique unique." />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="SU. | Restaurant & Bar à Cocktails Paris 11ème" />
+    <meta property="og:description" content="Restaurant & bar à cocktails à Paris 11ème. Cuisine raffinée, cocktails créatifs et ambiance chaleureuse. Réservez votre table pour une expérience gastronomique unique." />
+    <meta property="og:type" content="restaurant.restaurant" />
+    <meta property="og:url" content="https://su-paris.fr" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544148103-0773bf10d330" />
+    <meta property="og:locale" content="fr_FR" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SU. | Restaurant & Bar à Cocktails Paris 11ème" />
+    <meta name="twitter:description" content="Restaurant & bar à cocktails à Paris 11ème. Cuisine raffinée, cocktails créatifs et ambiance chaleureuse." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1544148103-0773bf10d330" />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="keywords" content="restaurant paris 11, bar à cocktails paris, cuisine raffinée, cocktails créatifs, restaurant saint-maur" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="SU. Restaurant" />
+    <meta name="geo.position" content="48.86671;2.37954" />
+    <meta name="geo.placename" content="Paris" />
+    <meta name="geo.region" content="FR-75" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(function(OneSignal) {
+        OneSignal.init({
+          appId: "af029530-ac51-44a2-b809-315f55b74194",
+          allowLocalhostAsSecureOrigin: true,
+          notifyButton: {
+            enable: false,
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
